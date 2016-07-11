@@ -1,0 +1,157 @@
+.header {
+	margin-bottom: 1.3em;
+	.wrapper {
+		position: relative;
+	}
+	background-color: $blue_main;
+}
+
+.logo { float: left; }
+	.logo-img { width: 10rem; }
+
+.header-links {
+	margin-top: 1em;
+	margin-right: 7em;
+	text-align: right;
+	li {
+		@include inline;
+		margin-left: 2.2em;
+		background: url(../images/sprite_icons.png) no-repeat 0 0;
+	}
+	.save { 
+		background-position: 0 0;
+	}
+	.cancel { background-position: -35px 0; }
+	a {
+		display:block;
+		width: 2.7em;
+		height: 2.7em;
+		text-indent: -999em;
+		text-align: left;
+	}
+}
+
+.call-us {
+	position: absolute;
+	top: 0;
+	right: 1.1em;
+	width: 5.3em;
+	height: 100%;
+	background-color: $grey;
+
+	.timetable {
+		@extend .offscreen;
+	}
+	.phone {
+		display: block;
+		position: absolute;
+		top: .6em;
+		right: 1em;
+		width: 3.4em;
+		height: 3.4em;
+		background: url(../images/sprite_icons.png) no-repeat -7em 0;
+		text-indent: -9999em;
+	}
+	&:before {
+		display: block;
+		content: "";
+		height: 1.7em;
+		margin-top: -1.7em;
+		background: rgba(229, 231, 235, 0.7);
+
+	}
+}
+
+
+@media (min-width: $tablet) {
+	.header { margin-bottom: 2em; }
+
+	.header-links { 
+		margin-top: 2em;
+	}
+
+	.logo-img {
+		width: 13.6rem;
+		margin-left: 1.4em;
+	}
+
+	.call-us {
+		right: 2em;
+		.phone {
+			top: 1.5em;
+		}
+	}
+}
+
+@media (min-width: $desktop) {
+	.header-links {
+		margin-top: 2.5em;
+		margin-right: 24.6em;
+		li {
+			background: none;
+			a {
+				@include inline;
+				width: auto;
+				height: auto;
+				text-indent: 0;
+				font-size: 1.6rem;
+				color: $white;
+				text-decoration:none;
+				&:hover { text-decoration: underline; }
+			}
+			&:before {
+				@include inline;
+				content: "";
+				width: 2.7em;
+				height: 2.7em;
+				margin-right: 1.2em;
+				text-indent: -999em;
+				text-align: left;
+				background: url("../images/sprite_icons.png") no-repeat 0 0;
+			}
+			&.save:before {
+				background-position: 0 0;
+			}
+			&.cancel:before {
+				background-position: -35px 0;
+			}
+		}
+	}
+	.logo {
+		margin: .6em 0;
+	}
+	.call-us {
+		right: 0;
+		width: 19.6em;
+		.group1 {
+			display: block;
+			margin-top: 2.2em;
+			padding: .6em .8em .8em;
+		}
+		.timetable {
+			display: block;
+			position: static;
+			width: 100%;
+			height: auto;
+			overflow: visible;
+			font-size: 1.3rem;
+		}
+		.timetable, .phone {
+			color: $contact_color;
+		}
+		.phone {
+			display: block;
+			position: static;
+			width: auto;
+			height: auto;
+			background: none;
+			text-indent: 0;
+			text-decoration: none;
+			font-size: 3.2rem;
+			line-height: 100%;
+			font-weight: 300;
+			letter-spacing: -.05em;
+		}
+	}
+}
+

@@ -1,0 +1,44 @@
+/* **** BREAKPOINTS **** */
+$tablet: 768px;
+$tablet_landscape: 960px;
+$desktop: 1200px;
+
+$generic-padding: 0 1.1em;
+
+
+
+/* **** COLORS **** */
+
+// Descriptive naming
+//-- colors:start; --//
+$white: #ffffff;
+$black: #000000;
+$blue: #00b2f9;
+$blue2: #008cb4;
+$blue3: #16304f;
+$blue4: #30a2c2;
+$blue5: #a0ccda;
+$blue6: #008CB4;
+$blue7: #0067aa;
+$grey: #e5e7eb;
+$grey2: #edeef1;
+$grey3: #4d4d4d;
+$grey4: #f2f3f5;
+$grey5: #d9dce2;
+$grey6: #f2f2f2;
+$orange: #e26f00;
+$red: #e00000;
+
+
+// Functional naming
+$blue_main: $blue;
+$blue_secondary: $blue2;
+$bck_box: $grey;
+$contact_color: $blue3;
+$border_fields: $grey3;
+$bck_form-fields: $grey2;
+$color_text-default: $grey3;
+$color_error: $red;
+//-- colors:end; --//
+$pMobile: 0 10px;
+$pDesktop: 0 20px;

@@ -1,0 +1,66 @@
+@mixin acc_hide {
+	position: absolute;
+	top: -9999em;
+	left: -9999em;
+}
+@mixin reset-acc_hide {
+	position: static;
+}
+@mixin fullblock {
+	display: block;
+	width: 100%;
+}
+@mixin inline {
+	display:inline-block;
+	vertical-align:middle;
+}
+
+@mixin inlinetop {
+	display:inline-block;
+	vertical-align:top;
+}
+
+@mixin font {
+	font-family: 'Raleway', sans-serif;
+}
+
+@mixin resetlist {
+  	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+@mixin genericmarginb {
+  	margin-bottom: 2em;
+}
+@mixin btn {
+	@include fullblock;
+	border: none;
+	padding: 1em;
+	background: none;
+	font-size: 1em;
+	@include font;
+	text-transform: uppercase;
+}
+@mixin color_placeholder {
+	::-webkit-input-placeholder {  
+		color: $white;
+	}
+	:-moz-placeholder {  
+		color: $white;
+	}
+	::-moz-placeholder {  
+		color: $white;
+	}
+	:-ms-input-placeholder {  
+		color: $white;
+	}
+}
+
+@mixin vAlign {
+	//require 'position: relative' in parent element
+  	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	transform: translateY(-50%);
+}

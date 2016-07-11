@@ -1,0 +1,91 @@
+.calendar-cont {
+	max-width: 48em;
+	margin: 0 auto;
+	.controls, .ui-datepicker-header {
+		position: relative;
+		padding: 1em;
+		text-align: center;
+		select {
+			margin-right: .4em;
+			border: 1px solid $blue;
+			border-radius: 3px;
+			padding: .2em;
+			background: none;
+			font-size: 1.4rem;
+			font-weight: 300;
+		}
+		.ui-datepicker-month { width: 7em;}
+		.ui-datepicker-year { width: 4em;}
+	}
+	.prev, .next, .ui-datepicker-prev, .ui-datepicker-next {
+		position: absolute;
+		top: 50%;
+		width: 3.1em;
+		height: 3.1em;
+		margin-top: -1.5em;
+		background: url(../images/sprite_icons.png) no-repeat 0 0;
+		text-align: left;
+		text-indent: -999em;
+	}
+	.prev, .ui-datepicker-prev {
+		left:0;
+		background-position: -41px -42px;
+	}
+	.next, .ui-datepicker-next {
+		right:0;
+		background-position: -77px -42px;
+	}
+}
+
+.calendar, .calendar-cont table {
+	width: 100%;
+	background-color: $white;
+	thead {
+		display:none;
+	}
+	td {
+		border: 1px solid $grey;
+		text-align: center;
+		font-size: 1.8rem;
+		font-weight: 300;
+		> span, > a {
+			display:block;
+			padding: .4em 0;
+		}
+	}
+	.other-month {
+		color: $grey;
+	}
+	.ui-state-active {
+		background-color: $blue;
+		color: $white;
+	}
+	.ui-datepicker-unselectable {
+		color: $grey5;
+	}
+	a {
+		display: block;
+		color: $black;
+		text-decoration: none;
+		&:hover {
+			background-color: $blue;
+			color: $white;
+		}
+	}
+}
+
+
+@media (min-width: $tablet) {
+	.calendar-cont {
+		.ui-datepicker-header {
+			.ui-datepicker-month { width: 12em;}
+			.ui-datepicker-year { width: 7em;} 
+		}
+	}
+
+	.calendar {
+		.other-month, a {
+			padding: .8em 0;
+		}
+	}
+}

@@ -1,0 +1,37 @@
+
+link(rel="shortcut icon" href="favicon.ico")
+
+
+// Metadatos para modo compatibilidad con IE7, IE8
+meta(http-equiv="X-UA-Compatible" content="IE=edge")
+
+// Metadatos de contenidos de la web
+meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+// Metadatos para los buscadores
+meta(name="description" content="...")
+meta(name="keywords" content="...")
+meta(name="robots" content="...")
+    
+// Meta vista en dispositivos moviles
+meta(name="viewport" content="initial-scale=1.0, width=device-width")
+    
+// Favicon
+link(rel="shortcut icon" href="favicon.ico")
+
+// Google Fonts: Open Sans
+link(href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic, 600italic, 700italic,700,300,400,600' rel='stylesheet' type='text/css')
+    
+// Hojas de estilo
+link(rel="stylesheet" type="text/css" href="css/styles.css")
+
+link(rel="stylesheet" type="text/css" href="css/print.css" media="print")
+
+script(src="https://code.jquery.com/jquery-1.11.3.min.js")
+script(src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js")
+
+mixin ie(condition, content)
+    | <!--[!{condition}]>!{content}<![endif]-->
+
+
++ie('if lt IE 9', '<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js" type="text/javascript"></script>')
+            

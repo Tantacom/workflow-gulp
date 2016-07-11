@@ -1,0 +1,393 @@
+legend { 
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.group-inputs, input[type="text"], input[type="password"], textarea, select {
+	border: 1px solid $border_fields;
+}
+
+select {
+	border-radius: 6px;
+	background-color: $grey6;
+}
+
+input[type="text"], input[type="password"], textarea, select {
+	width: 100%;
+	padding: .4em .8em;
+	font-size: 2rem;
+	color: $blue3;
+	font-weight: 300;
+	.group-inputs & {
+		width: auto;
+		border: none;
+		padding: 0;
+	}
+}
+
+.box-cont, .group-inputs {
+	input[type="text"], input[type="password"], textarea {
+		background-color: $white;
+	}
+}
+
+.field label, .label {
+	display:block;
+	margin-bottom: .5em;
+	font-size: 1.8rem;
+	color: $black;
+	font-weight: bold;
+}
+
+/*group fields: date, cp, etc*/
+.group-inputs {
+	display: table;
+	max-width: 36em;
+	width: 100%;
+	padding: 1em 0;
+	background-color: $bck_form-fields;
+	> * {
+		display: table-cell;
+		input[type="text"], input[type="password"] {
+			width: 100%;
+			border-right: 1px solid $border_fields;
+			padding: .45em .6em;
+			text-align: center;
+		}
+		&:last-child {
+			input[type="text"], input[type="password"] {
+				border-right: none;
+			}
+		}
+	}
+	&.w100 {
+		max-width: 100%;
+	}
+}
+
+.meter {
+	height: 1em;
+	margin-bottom: 4em;
+	border: 1px solid $blue2;
+	border-radius: 5px;
+	.progress, .porcent {
+		background-color: $blue2;
+	}
+	.progress {
+		display: block;
+		position: relative;
+		height: 100%;
+		border-radius: 5px;
+	}
+	.porcent {
+		position: absolute;
+		top: -3.4em;
+		right: -1.1em;
+		width: 3em;
+		height: 3em;
+		border-radius: 50%;
+		font-size: 1em;
+		line-height: 3em;
+		color: $white;
+		text-align: center;
+		&:after {
+			position: absolute;
+			bottom: -.3em;
+			left: 50%;
+			content:"";
+			width:.1em;
+			height: .3em;
+			border-right:1px solid $blue2;
+		}
+	}
+}
+
+
+/*Pretty*/
+.prettycheck {
+	display: inline-block;
+	position: relative;
+	input[type='checkbox']{
+	    float: left;
+    	position: relative;
+    	top: 5px;
+    	left: 2px;
+    	border:0 none;
+    	background: none;
+		&:checked + label:after {
+		    opacity: 1;
+		}
+	}
+	label {
+	    position: absolute;
+	    top: .5em;
+	    left: 0;
+	    border: none;
+	    margin-right: .5em;
+	    width: 1.8em;
+	    height: 1.8em;
+	    border: 1px solid $black;
+	    border-radius: 3px;
+	    background-color: $grey;
+	    cursor: pointer;
+		&:after {
+		    content: '';
+		    position: absolute;
+		    top: .3em;
+		    left: .2em;
+		    opacity: 0;
+		    border: 2px solid $black;
+		    border-top: none;
+		    border-right: none;
+		    width: 1.2em;
+		    height: .6em;
+		    background: transparent;
+		    transform: rotate(-45deg);
+		}
+	}
+	.lbl {
+		display: block;
+	    padding-left: 1.4em;
+	    width: auto;
+	    font-weight: 300;
+	    font-size: 2rem;
+	}
+}
+
+.prettyradio {
+	display: inline-block;
+	position: relative;
+	input[type='radio']{
+	    float: left;
+    	position: relative;
+    	top: 5px;
+    	left: 2px;
+    	border:0 none;
+    	background: none;
+		&:checked + label:after {
+		    opacity: 1;
+		}
+	}
+	label {
+	    position: absolute;
+	    top: .5em;
+	    left: 0;
+	    border: none;
+	    margin-right: .5em;
+	    width: 1.8em;
+	    height: 1.8em;
+	    border: 2px solid $black;
+	    border-radius: 50%;
+	    background-color: $grey;
+	    cursor: pointer;
+		&:after {
+		    content: '';
+		    position: absolute;
+		    top: .3em;
+		    left: .3em;
+		    opacity: 0;
+		    border: 2px solid $black;
+		    border-radius: 50%;
+		    width: .8em;
+		    height: .8em;
+		    background: $black;
+		}
+	}
+	.lbl {
+		display: block;
+	    padding-left: 1.4em;
+	    width: auto;
+	    font-weight: 300;
+	    font-size: 2rem;
+	    font-weight: bold;
+	    > span {
+	    	font-weight: 300;
+	    }
+	}
+}
+
+.lightbox {
+	.prettyradio, .prettycheck {
+		display: block;
+		label {
+			top:0;
+			background-color: $white;
+		}
+		.lbl { padding-left: 1.8em; }
+	}
+}
+
+
+/*form list one col*/
+.list-type {
+	@include resetlist;
+	margin-bottom: 3em;
+	> li {
+		margin-bottom: 1.2em;
+	}
+}
+
+/*form list two cols*/
+.list-col-2 {
+	@include resetlist;
+	li {
+		margin-bottom: 1.8em;
+	}
+}
+.disabled {
+	.prettycheck label {
+		border: 1px solid $grey3;
+	}
+	.lbl {
+		color: $grey3;
+	}
+}
+
+/*help*/
+.help-wrapper {
+	.help-cont {
+		position: relative;
+		width: 100%;
+		margin-top: 1.5em;
+		border-radius: 6px;
+		padding: 2em 1.8em;
+		background-color: $white;
+		.wysiwyg {
+			font-size: 1.6rem;
+		}
+		&:before {
+			position: absolute;
+			top: -.7em;
+			left: 1em;
+			content: "";
+			border-left: 7px solid transparent;
+			border-right: 7px solid transparent;
+			border-bottom: 7px solid $white;
+		}
+	}
+}
+
+
+.help-ico {
+	display: inline-block;
+	text-indent: -999em;
+	background: url(../images/sprite_icons.png) no-repeat -144px 0;
+	a {
+		display: block;
+		width: 2.9em;
+		height:2.9em;
+	}
+}
+
+
+/*error forms*/
+
+.error-cont {
+	margin-bottom:2em;
+	border: 1px solid $color_error;
+	ul {
+		@include resetlist;
+		padding: 1em;
+	}
+	li {
+		margin-bottom: .4em;
+		font-size: 1.5rem;
+		color: $color_error;
+	}
+}
+
+.error {
+	label, .label, .lbl a {
+		color: $color_error;
+	}
+	input[type="text"], input[type="password"], textarea, select, &.prettycheck label {
+		border: 1px solid $color_error;
+	}
+	.group-inputs {
+		border: 1px solid $color_error;
+		input[type="text"], input[type="password"], textarea {
+			border-top: none;
+			border-bottom: none;
+			border-left: none;
+		}
+	}
+}
+.error-sms {
+	position: relative;
+	margin-top: .8em;
+	font-size: 1.2rem;
+	color: $color_error;
+	span {
+		@include inline;
+		width: 95%;
+		padding-left: 3em;
+	}
+	&:before {
+		@include inline;
+		content: "";
+		width: 2.8em;
+		height: 2.8em;
+		margin-right: -2em;
+		background: url(../images/sprite_icons.png) no-repeat 0 -41px;
+	}
+}
+
+
+@media (min-width: $tablet) {
+
+	/*help*/
+	.help-wrapper {
+		.help-cont {
+			position: static;
+			border-radius: 0;
+			margin-top: 0;
+			padding: 2em 0 0;
+			background: none;
+			.wysiwyg {
+				font-size: 2rem;
+			}
+			&:before {
+				position: static;
+				border: none;
+			}
+		}
+	}
+	
+
+}
+
+
+@media (min-width: $desktop) {
+
+	.meter {
+		position: absolute;
+		top: 3em;
+		right: 2em;
+		width: 36em;
+		margin-bottom: 0;
+		padding-top: 0;
+		.porcent {
+			font-size: .8em;
+		}
+	}
+
+
+	.list-col-2 li {
+		@include inline;
+		width:48%;
+		margin-right: 1%;
+		&:nth-child(even) {
+			margin-right: 0;
+		}
+	}
+
+	/*error forms*/
+	.error-sms {
+		&:before {
+			width: 2.8em;
+			height: 2.8em;
+		}
+	}
+
+
+}

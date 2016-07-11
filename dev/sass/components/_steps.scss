@@ -1,0 +1,209 @@
+.box-cont {
+	margin-bottom: 2.2em;
+	border-bottom: 5px solid $orange;
+	background-color: $bck_box;
+	.cont {
+		padding-top: 6em;
+		padding-bottom: 2em;
+		&.type2 {
+			padding-top: 3em;
+		}
+	}
+}
+.steps-bar {
+	position: relative;
+	&:after {
+		position:absolute;
+		bottom:0;
+		left:0;
+		border-bottom: 5px solid $blue;
+		content:"";
+		width:100%;
+		z-index: 0;
+
+	}
+}
+
+.steps-bar ul {
+	display: table;
+	width: 100%;
+}
+
+.steps-bar li {
+	display: table-cell;
+	position: relative;
+	z-index:2;
+	margin-right: 2em;
+	padding-right:2.7em;
+	background: url(../images/arrow_steps.png) no-repeat 100% 50%;
+	a, span {
+		display: block;
+	}
+	&.sel {
+		width: 46%;
+		padding-right: 3em;
+		background: url(../images/arrow_steps-sel.png) no-repeat 100% 50%;
+		a {
+			background-color: $blue2;
+		}
+		span {
+			padding:0 1em 0 3.6em;
+		}
+		span:after {
+	  		position: absolute;
+	  		top: -.1em;
+	  		left: 1.2em;
+	  		width:2em;
+	  		height:2em;
+	  		content:"";
+	  	}
+	}
+	&.back {
+		width: auto;
+		background:$blue2 url(../images/arrow_steps-back.png) no-repeat 100% 50%;
+		text-indent: -999em;
+		span:after {
+			left: .5em;
+		}
+	}
+	> span {
+		position: relative;
+	}
+	a, > span {
+		height:5em;
+		padding: .5em 0;
+		color: $white;
+		text-decoration: none;
+		font-size: 1.4rem;
+	}
+	a span, > span span {
+		position: absolute;
+		top: 50%;
+		left: 0px;
+		width: 100%;
+		transform: translateY(-50%);
+		
+  	}
+  	> span span {
+  		left: 50%;
+  		width: 2em;
+  		height:2em;
+  		margin-left: -.5em;
+  		text-indent: -999em;
+  	}
+  	&.sel span:after, span span {
+		background: url(../images/sprite_icons.png) no-repeat 0 0;
+  	}
+  	&.ico1.sel span:after, &.ico1 span span {
+		background-position: -241px 0;
+  	}
+  	&.ico1 span span {
+  		background-position: -275px -61px;
+  	}
+  	&.ico2.sel span:after {
+  		background-position: -273px -32px;
+  	}
+  	&.ico2 span span {
+		background-position: -208px -28px;
+  	}
+  	&.ico3.sel span:after {
+		top: -.3em;
+  	} 
+  	&.ico3 span span {
+		background-position: -207px 1px;
+  	}
+  	&.ico4.sel span:after {
+  		top: -.4em;
+		background-position: -179px 1px;
+  	}
+  	&.ico4 span span {
+		background-position: -243px -27px;
+  	}
+	  	
+	
+}
+
+@media (min-width: $tablet) {
+
+	.box-cont {
+		.cont {
+			padding-bottom: 2em;
+		}
+	}
+	
+	.steps-bar {
+		li {
+			&.sel {
+				width: auto;
+			}
+
+			a, > span {
+				height:4.4em;
+				font-size: 1.6rem;
+			}
+			> span span {
+				left:0;
+				width: auto;
+				height: auto;
+				padding-left: 3.6em;
+				text-indent: 0;
+				background: none;
+				&:after {
+					position: absolute;
+			  		top: -.1em;
+			  		left: 1.2em;
+			  		width:2em;
+			  		height:2em;
+			  		background: url("../images/sprite_icons.png") no-repeat 0 0;
+			  		content:"";
+				}
+			}
+			> span {
+				color: $blue2;
+				span:after {
+					left: 1.2em;
+				}
+			}
+			&.ico1 span span:after {
+				background-position: -278px -62px;
+			}
+			&.ico1.sel span span:after {
+				background-position: -241px 0;
+		  	}
+		  	&.ico2 span span:after {
+				background-position: -208px -28px;
+		  	}
+		  	
+		  	&.ico3 span span:after {
+				background-position: -207px 1px;
+		  	}
+		  	
+		  	&.ico4 span span:after {
+				background-position: -238px -27px;
+		  	}
+
+		}
+	}
+
+}
+
+@media (min-width: $desktop) {
+	
+	.box-cont {
+		position: relative;
+		.cont {
+			padding-top: 4em;
+			padding-bottom: 3.2em;
+			&.reset {
+				padding-top: 0;
+			}
+		}
+	}
+
+	.steps-bar {
+		ul {
+			width: 60%;
+		}
+	}
+
+}

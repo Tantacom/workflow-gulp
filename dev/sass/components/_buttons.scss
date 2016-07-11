@@ -1,0 +1,157 @@
+/*---
+title: Buttons
+resume: The buttons page
+section: Default Buttons
+---
+
+My ``styleguide`` includes two predefined **button** styles, each serving its own semantic purpose.
+
+```example
+<span class="btn"><a href="#">sdfsdfsfd</a></span>
+​```
+
+```html
+<span class="btn"><a href="#">sdfsdfsfd</a></span>
+​```
+
+.btn {
+	display: inline-block;
+	vertical-align: middle;
+	min-width: 8em;
+	margin-left: 1em;
+	border-radius: 5px;
+	background-color: $blue2;
+	font-size: 2rem;
+	text-align: center;
+	a, input {
+		padding: 1em;
+		color: $white;
+	}
+	a {
+		display:block;
+		text-decoration: none;
+	}
+	input {
+		display:block;
+		width: 100%;
+		height: 100%;
+		border: none;
+		background: none;
+	}
+	&.type2 {
+		background-color: $orange;
+	}
+	&.type3 {
+		min-width: 6em;
+		border: 1px solid $orange;
+		background-color: $white;
+		a, input {
+			color: $orange;
+		}
+	}
+	&.flt, &.w100 {
+		margin-left:0;
+	}
+}
+
+*/
+
+.btn {
+	display: inline-block;
+	vertical-align: middle;
+	min-width: 8em;
+	margin-left: 1em;
+	border-radius: 5px;
+	background-color: red;
+	font-size: 2rem;
+	text-align: center;
+}
+.btn a {
+	display:block;
+	text-decoration: none;
+	padding: 1em;
+	color: #fff;
+}
+
+
+.btn {
+	display: inline-block;
+	vertical-align: middle;
+	min-width: 8em;
+	margin-left: 1em;
+	border-radius: 5px;
+	background-color: $blue2;
+	font-size: 2rem;
+	text-align: center;
+	a, input {
+		padding: 1em;
+		color: $white;
+	}
+	a {
+		display:block;
+		text-decoration: none;
+	}
+	input {
+		display:block;
+		width: 100%;
+		height: 100%;
+		border: none;
+		background: none;
+	}
+	&.type2 {
+		background-color: $orange;
+	}
+	&.type3 {
+		min-width: 6em;
+		border: 1px solid $orange;
+		background-color: $white;
+		a, input {
+			color: $orange;
+		}
+	}
+	&.flt, &.w100 {
+		margin-left:0;
+	}
+}
+
+.action {
+	span:first-child {
+		margin-left: 0;
+	}
+	.btn {
+		font-size: 1.6em;
+	}
+}
+
+.back {
+	margin-top: .8em;
+	font-size: 2rem;
+	a {
+		color: $orange;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+		&:before {
+			@include inline;
+			content:"";
+			width: 1.4em;
+			height: 1.4em;
+			margin-right: .3em;
+			background: url(../images/sprite_icons.png) no-repeat -110px 0;
+		}
+	}
+
+}
+
+@media (min-width: $tablet) {
+
+	.btn {
+		min-width: 10em;
+	}
+
+	.action .btn {
+		font-size: 2em;
+	}
+
+}

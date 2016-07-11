@@ -1,0 +1,62 @@
+doctype html
+
+html(lang="es")
+  head
+    title Workflow con Gulp
+    include ./partials/head.jade
+    
+  body
+    
+    include ./partials/header.jade
+    
+    main(role="main" id="bodyContent")
+      div(class="wrapper cl")
+        
+        section(class="box-cont")
+
+          div(class="head-section")
+            h1(class="title-section") Login
+
+          article(class="cont type2")
+
+            div(class="two-cols position cl")
+
+              div(class="col2 col-sm-3 col-lg-4")
+                
+                div(class="help-wrapper")
+
+                  div(class="help-cont")
+                    div(class="wysiwyg")
+                      p
+                        strong Información sobre el login
+
+                      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae diam faucibus enim elementum semper. Fusce eget porta urna. Nulla pretium porta nunc in posuere. Maecenas eu dolor in ex scelerisque lobortis et ut massa. Proin ultricies tempus gravida. Nunc nec lacinia risus. Praesent id dolor eget erat sodales accumsan a ac augue. Nunc laoreet nec dolor quis vestibulum. Sed malesuada ante at ipsum placerat, nec convallis enim pulvinar. Fusce id nibh gravida, gravida enim vitae, scelerisque nulla. Quisque mollis justo vitae facilisis tristique. Integer et pulvinar felis.
+
+                    
+              
+              div(class="col1 type-b col-sm-9 col-lg-8")
+
+                div(class="main-title col-xs-12 col-lg-8")
+                  h1(class="title") Login
+
+                form(action="#" method="post" class="col-lg-10")
+                  div(class="field-row")
+                    div(class="field")
+                      label(for="user") Usuario
+                      input(id="user" type="text")
+
+                  div(class="field-row")
+                    div(class="field")
+                      label(for="pass") Contraseña
+                      input(id="pass" type="text")
+
+                  div(class="action right")
+                    span(class="btn type2")
+                      a(href="#")
+                        span Acceder
+
+    // build:js
+    script(src='js/lang_ES.js')
+    script(src='js/common.js')
+    // endbuild
+    

@@ -1,0 +1,451 @@
+.two-cols.type2 .col2, .two-cols.type3 .col2 {
+	display:none;
+}
+
+.block-type1-cont {
+	margin-bottom: 4em;
+}
+
+.block-type1 {
+	position: relative;
+	padding-bottom: 15.4em;
+	background-color: $grey4;
+	.col1 & {
+		padding:0;
+	}
+	.container {
+		padding: 1.8em 0;
+	}
+	ul {
+		@include resetlist;
+	}
+	li {
+		position: relative;
+		margin-bottom: .8em;
+		padding-left: 1.2em;
+		&:before {
+			position: absolute;
+			top:.4em;
+			left:0;
+			z-index: 0;
+			content:"";
+			width: .9em;
+			height: .9em;
+			background: url("../images/sprite_icons.png") no-repeat -118px -42px;
+		}
+	}
+	.text {
+		.title {
+			margin-bottom: .5em;
+			font-size: 2.4rem;
+			color: $blue3;
+			font-weight: 400;
+		}
+	}
+	.wysiwyg {
+		font-size: 1.6rem;
+		color: $black;
+	}
+	.btn-cont {
+		position: absolute;
+		left:0;
+		bottom: -2em;
+	}
+	.btn {
+		margin-left: 0;
+	}
+	
+	.price {
+		position: relative;
+		min-height: 20em;
+		text-align: center;
+		border: 2px solid $orange;
+		border-radius: 7px;
+		> .content {
+			@include vAlign;
+			padding: .1em;
+			> span {
+				font-size:4.8rem;
+				line-height: .8em;
+				color: $orange;
+				font-weight: 400;
+				span {
+					display:block;
+					margin-top: -.2em;
+					font-size:2.4rem;
+				}
+				&.dues-text {
+					display: block;
+					margin-top: 1em;
+					font-size: 1.4em;
+				}
+			}
+			.dues-list {
+				display: inline-block;
+				margin: 1em auto 0;
+				font-size: 1.3em;
+				color: $orange;
+				text-align: left;
+				li {
+					display: block;
+					margin-bottom: .5em;
+					&:before {
+						background-position: -118px -62px;
+					}
+				}
+			}
+		}
+	}
+	.see-more {
+		padding: 1.2em;
+		background-color: $grey;
+	}
+	.detail {
+		margin-top: 1.7em;
+		.subtitle {
+			margin-left: 1.2em;
+			margin-bottom: 1em;
+			font-weight: 400;
+		}
+		&.hide {
+			display: none;
+		}
+	}
+	.toggle {
+		font-size: 1.6rem;
+		font-weight: 300;
+		a {
+			color: $black;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		&:before {
+			@include inlinetop;
+			content: "";
+			margin-right: 1em;
+			width: 2em;
+			height: 2em;
+			background:url(../images/sprite_icons.png) no-repeat -160px -40px;
+			font-size:1rem;
+		}
+		&.less:before {
+			background-position: -136px -40px;
+		}
+	}
+	
+}
+
+//cabecera de seccion
+.head-section {
+	background-color: $blue;
+	padding: 1.5em;
+	.title-section {
+		font-size: 3.5rem;
+		font-weight: bold;
+		color: $white;
+	}
+}
+
+//resumen de presupuesto
+.block-type1-cont.type2 {
+	margin-bottom: 2em;
+	.block-type1 .text { padding: $pMobile; }
+}
+
+
+//block modificar datos
+.block-type2 {
+	margin-bottom: 2em;
+	background-color: $grey4;
+	.title {
+		margin-bottom: .8em;
+		font-size: 2.4rem;
+		color: $blue3;
+		font-weight: 300;
+	}
+	.col-a {
+		border-bottom: 2px solid $grey;
+	}
+	.col-a, .col-b {
+		padding-top: 2em;
+		padding-bottom: 2em;
+	}
+	.link a {
+		font-size: 1.6rem;
+		color: $blue7;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+//acciones: guardar presupuesto
+.header-links {
+	text-align: left;
+	li {
+		position: relative;
+		margin: 1.5em 0;
+		padding-left: 3.5em;
+		background: none;
+		&:before {
+			display: inline-block;
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 2.7em;
+			height: 2.7em;
+			background: url(../images/sprite_icons.png) 0 0 no-repeat;
+		}
+		&.save, &.save.type2 {
+			&:before {
+				background-position: 0 -80px;
+			}
+		}
+		&.doc {
+			padding-left: 2em;
+			&:before {
+				width: 2em;
+				background-position: -41px -80px;
+			}
+		}
+		a {
+			width: 100%;
+			background: none;
+			font-size: 1.6rem;
+			color: $blue;
+			text-indent: 0;
+			text-decoration: underline;
+		}
+	}
+}
+.col2.action {
+	.header-links {
+		margin: 0;
+		padding-left: 10px;
+		padding-right: 10px;
+		li {
+			margin: 0;
+			a:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.left .header-links {
+	text-align: left;
+}
+.right .header-links {
+	text-align: right;
+}
+
+.list-type3 {
+	dt, dd {
+		float: left;
+		margin-bottom: .2em;
+		font-size: 1.6rem;
+	}
+	dt {
+		clear: left;
+		margin-right: .2em;
+	}
+	dd { font-weight: 300; }
+}
+
+.w100.btn {
+	width: 100%;
+}
+
+
+
+@media (max-width: 767px) {
+	.block-type1 .text { padding: 0;}
+}
+
+@media (min-width: $tablet) {
+
+	.two-cols {
+		position: relative;
+		/*.col2 {
+			position: absolute;
+			top:0;
+			right: 0;
+		}*/
+		.col2.action .header-links {
+			padding: 0;
+		}
+	}
+
+	.two-cols{
+		&.type2 .col2 {
+			display: block;
+			.wysiwyg {
+				margin-top: 10em;
+			}
+		}
+		&.type3 .col2 {
+			.wysiwyg {
+				margin-top: 4em;
+			}
+		}
+	}
+
+	.block-type1-cont {
+		clear: both;
+		margin: 0 2em 5em;
+		background-color: $grey4;
+		&.type2 {
+			margin: 0 0 2em;
+		}
+	}
+
+	.block-type1 {
+		background: none;
+		.container {
+			background-color: $grey4;
+		}
+		.text {
+			padding-left:0;
+		}
+		.price-cont {
+			padding-left: 0;
+		}
+		.price {
+			min-height: 21em;
+		}
+		.see-more {
+			padding: 1em 1em 1em 2.5em;
+			background-color: $grey5;
+		}
+		.btn-cont {
+			.btn, a { min-height: 3.8em;}
+			.btn {
+				width: 100%;
+				a {
+					position: relative;
+				}
+				span {
+					@include vAlign;
+					padding:0 1em;
+				}
+			}
+		}
+	}
+
+	//block modificar datos
+	.block-type2 {
+		display: table;
+		width: 100%;
+		.col-a, .col-b {
+			display: table-cell;
+			float: none;
+		}
+		.col-a {
+			border-right: 2px solid $grey;
+			border-bottom: none;
+		}
+		.col-b { position: relative;}
+		.title {
+			margin-bottom: .6em;
+		}
+	}
+	.v-align-wrapper {
+		position: absolute;
+		top:0;
+		left:0;
+		width: 100%;
+		height: 100%;
+		.v-align {
+			@include vAlign;
+			padding: 0 2em;
+			text-align: center;
+		}
+	}
+	
+
+
+}
+
+
+@media (min-width: $desktop) {
+	.two-cols.type2 .col1 {
+		padding-right: 2em;
+	}
+
+	.two-cols {
+		&.type2 .col2, &.type3 .col2 {
+			.wysiwyg {
+				margin-top: 3em;
+			}
+		}
+		.col2.action {
+			.header-links {
+				position: absolute;
+				top: -80px;
+				right: 20px;
+				li {
+					&:before {
+						display: block;
+						content:"";
+						background: transparent url("../images/sprite_icons.png") no-repeat scroll 0px 0px;
+					}
+					a {
+						color: $white;
+						&:hover {
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.block-type1-cont {
+		clear: both;
+		margin: 0 0 4.2em;
+		background: none;
+	}
+	.block-type1 {
+		padding-bottom: 0;
+		.text {
+			padding-left:2em;
+		}
+		.btn-cont {
+			position: static;
+			.btn, .btn a {
+				min-height: 10.5em;
+			}
+			
+		}
+
+		.see-more {
+			padding: 1em 2.5em 1em 2em;
+		}
+	}
+
+	.block-type1-cont.type2 {
+		.block-type1 .text { padding: $pDesktop;}
+	}
+
+	//guardar presupuesto
+	.col2.action .header-links {
+		.save {
+			&.type2 {
+				a {
+					padding-left: 0;
+					background: none;
+					width: auto;
+				}
+				&:before {
+					background-position: 0 -80px;
+				}
+			}
+		}
+	}
+	
+
+
+}

@@ -1,0 +1,82 @@
+doctype html
+
+html(lang="es")
+  head
+    title Workflow con Gulp
+    include ./partials/head.jade
+    
+  body
+
+    include ./partials/header.jade
+
+
+    main(role="main" id="bodyContent")
+      div(class="wrapper cl")
+        
+        section(class="box-cont")
+
+          div(class="head-section")
+            h1(class="title-section") Perfil de usuario
+
+          article(class="cont type2")
+            form(action="guardar-cotizacion2.html" method="post" class="cl")
+            
+              div(class="cl")
+              
+                div(class="type-b col-lg-12")
+                  div(class="main-title")
+                    h2(class="title") Información personal
+
+                   div(class="wysiwyg")
+                    p Todos los campos son obligatorios.
+
+                  div(class="field-row cl")
+                    div(class="field col-xs-12 col-lg-4")
+                      label(for="name") Nombre
+                      input(id="name" type="text")
+                    
+                    div(class="field col-xs-12 col-lg-8")
+                      label(for="surname") Apellidos
+                      input(id="surname" type="text")
+                  
+
+                  div(class="field-row cl")
+                    div(class="field col-xs-12 col-sm-12")
+                      label(for="address") Domicilio
+                      input(id="address" type="text")
+
+                  div(class="field-row cl")
+                    div(class="field col-xs-12 col-sm-4")
+                      label(for="city") Localidad
+                      input(id="city" type="text")
+                    
+                    div(class="field col-xs-12 col-sm-4")
+                      label(for="province") Provincia
+                      input(id="province" type="text")
+
+                    div(class="field col-xs-12 col-sm-4")
+                      label(for="cp") Código Postal
+                      input(id="cp" type="text")
+
+
+                  div(class="field-row cl")
+                    div(class="field col-xs-12 col-sm-4")
+                      label(for="phone") Teléfono
+                      input(id="phone" type="text")
+                    
+                    div(class="field col-xs-12 col-sm-8")
+                      label(for="email") Email
+                      input(id="email" type="text")
+                
+
+              
+
+        div(class="actions cl")
+          span(class="btn frt")
+              a(href="#") Guardar
+
+
+    // build:js
+    script(src='js/lang_ES.js')
+    script(src='js/common.js')
+    // endbuild

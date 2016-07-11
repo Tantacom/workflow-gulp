@@ -1,0 +1,54 @@
+.lightbox-cont .wrapper {
+	padding: 0;
+}
+
+.lightbox {
+	padding-bottom: 2.2em;
+	background-color: $white;
+	.title {
+		color: $blue3;
+		font-weight: 600;
+	}
+	.wysiwyg {
+		color: $black;
+	}
+}
+
+.header-lightbox {
+	margin-bottom: 2.5em;
+	padding: .8em 2em;
+	background-color: $blue;
+	.close {
+		display: block;
+		float: left;
+		margin-top: 1em;
+		background: transparent url("../images/sprite_icons.png") no-repeat -35px 0;
+		text-indent: -999em;
+		text-align: left;
+		a {
+			display:block;
+			width: 2.7em;
+			height: 2.7em;
+		}
+	}
+}
+.logo-lightbox {
+	float: right;
+	width: 10em;
+}
+
+@media (min-width: $desktop) {
+	.lightbox {
+		.field-row {
+			margin-bottom: 3.4em;
+		}
+	}
+
+	/*body {
+	    opacity: .5;
+	    box-sizing: border-box;
+	    transform: scale(.5);
+	    display: flex;
+	}*/
+
+}

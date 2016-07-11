@@ -1,0 +1,101 @@
+/*##### GENERIC STYLES #####*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0px;
+    padding: 0px;
+    border: 0px none;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.clr {clear:both}
+.flt {float:left}
+.frt {float:right}
+.offscreen, a.jump-link {position:absolute;top:-1500em;left:0;width:1px;height:1px;overflow:hidden}
+.hidden { display:none;}
+
+.right { text-align:right;}
+.center { text-align:center;}
+.centerImg { display: block; margin: 0 auto;}
+
+b, strong, .bold { font-weight: 600; }
+
+.upper { text-transform: uppercase; }
+
+legend, legend span { display:block; white-space:normal;}
+legend, .fullWidth { width:100%; }
+
+a {
+	color: $blue7;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+
+/*Citas*/
+.blockquote, .cite { display:block; margin:1em 0; padding:0 1.3em; font-size:1.3em; font-style:normal; color:#333; }
+
+/*Clearfix*/
+.cl:before, .cl:after { content:""; display:table; }
+.cl:after { clear:both; }
+
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
+.flt { float: left;}
+.frt { float: right;}
+
+
+html { font:normal 62.5% "Open Sans", Arial, Helvetica, sans-serif; }
+
+body { text-align:center; background-color: $white; }
+
+.main-title {
+	margin-bottom: 3em;
+	.title {
+		font-size: 3rem;
+		line-height: 100%;
+		color: $blue3;
+		font-weight: 300;
+		&.color-alt {
+			color: $orange;
+		}
+	}
+}
+
+/*lists*/
+.list-type2 {
+	@include resetlist;
+}
+
+
+.three-cols {
+	> * {
+		margin-bottom: .6em;
+	}
+}
+
+/*text*/
+.text-type1 {
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	font-size: 2rem;
+	font-weight: 700;
+	color: $orange;
+}
+
+
+
+@media (min-width: $tablet) {
+	
+	.three-cols {
+		max-width: 32em;
+		> * {
+			@include inline;
+			width: 32%;
+			padding-right: 1em;
+		}
+	}	
+
+}
